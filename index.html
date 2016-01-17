@@ -3,6 +3,7 @@
   <head>
     <title>Philander</title>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
   </head>
   <body>
     <script>
@@ -83,6 +84,9 @@
             document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!' + '<br>' +
             `<img src="${picture.data.url}">`;
+
+            $('#questions').show()
+            $('.fb_iframe_widget').hide()
           })
         });
       }
@@ -90,7 +94,11 @@
 
     <fb:login-button data-size="large" scope="public_profile,email,user_photos" onlogin="checkLoginState();">
     </fb:login-button>
-    <div id="status" />
+    <div id="status"></div>
+
+    <div id="questions" style="display: none">
+      What is the airspeed of an african swallow?
+    </div>
 
   </body>
 </html>
