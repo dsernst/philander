@@ -5,14 +5,14 @@
  */
 $('#tinderslide').jTinder({
   // dislike callback
-  onDislike: function (item) {
+  onDislike: function () {
   // set the status text
-    $('#status').html('Dislike image ' + (item.index() + 1))
+    $('#status').html('You disagreed.')
   },
   // like callback
-  onLike: function (item) {
+  onLike: function () {
     // set the status text
-    $('#status').html('Like image ' + (item.index() + 1))
+    $('#status').html('You agreed.')
   },
   animationRevertSpeed: 200,
   animationSpeed: 400,
