@@ -83,7 +83,7 @@
           FB.api(`/${response.id}/picture`, function (picture) {
             console.log(picture)
             document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!' + '<br>' +
+            'Thanks for logging in, ' + response.name + '<br>' +
             `<img src="${picture.data.url}">`;
 
             $('#questions').show()
