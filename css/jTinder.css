@@ -203,6 +203,11 @@ body {
     font-weight: bold;
 }
 
+#login-status img {
+  border-radius: 25px;
+  margin-top: 5px;
+}
+
 .matchedNotification, #ChatScreen {
   width: 460px;
   margin: 0 auto;
@@ -257,15 +262,15 @@ body {
   width: 55px;
 }
 
-
 #ChatScreen .matches img {
   width: 40px;
 }
+
 #ChatScreen .matches .match p {
   font-size: 14px;
 }
 
 #ChatScreen .name {
   font-weight: bold;
-  margin-bottom: -13px;
+  margin: 30px 0 -13px;
 }
