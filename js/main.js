@@ -49,11 +49,34 @@ function newMessage(msg) {
   $message.appendTo('#chatlog')
 }
 
+function enqueue(msg) {
+  setTimeout(newMessage.bind(null, msg), msg.delay)
+}
+
+var scheduledMsgs = [
+  { author: 'Max',
+    text: 'Hey!',
+    delay: 1000 },
+
+  { author: 'Emma',
+    text: 'hey I\'m Emma',
+    delay: 3000 },
+
+  { author: 'Max',
+    text: 'what do you think of bernie?',
+    delay: 6000 },
+
+  { author: 'Max',
+    text: 'hello?',
+    delay: 24000 },
+]
+
 $(function() {
   $('#ChatNow').click(function () {
     $('#ChatScreen').show()
     $('.matchedNotification').hide()
   })
+  scheduledMsgs.forEach(enqueue)
 
   $('input').keypress(function (e) {
     if (e.which === 13) {
