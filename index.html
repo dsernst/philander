@@ -91,7 +91,7 @@
 
             document.getElementById('status').innerHTML = 'Do you agree with the following?'
 
-            $('#questions').show(400, function(){})
+            $('#questions').fadeIn(400, function(){})
             $('.fb_iframe_widget').hide()
           })
         });
@@ -103,7 +103,7 @@
     <fb:login-button data-size="large" scope="public_profile,email,user_photos" onlogin="checkLoginState();">
     </fb:login-button>
 
-    <div id="questions" style="display: none;">
+    <div id="questions" style="display: none">
         <!-- start padding container -->
         <div class="wrap">
             <!-- start jtinder container -->
