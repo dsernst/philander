@@ -1,5 +1,14 @@
 /* global $ */
 
+var numAnswered = 0
+function countAnswer() {
+  if (++numAnswered === 6) {
+    setTimeout($('#status').html('You\'ve been matched!').bind(this), 0)
+    $('.matchedNotification').show()
+    $('#questions').hide()
+  }
+}
+
 /**
  * jTinder initialization
  */
@@ -8,11 +17,13 @@ $('#tinderslide').jTinder({
   onDislike: function () {
   // set the status text
     $('#status').html('You disagreed.')
+    countAnswer()
   },
   // like callback
   onLike: function () {
     // set the status text
     $('#status').html('You agreed.')
+    countAnswer()
   },
   animationRevertSpeed: 200,
   animationSpeed: 400,
