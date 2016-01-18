@@ -42,6 +42,7 @@ $('.actions .like, .actions .dislike').click(function (event) {
 
 $(function() {
   $('#ChatNow').click(function () {
-    console.log('foooooooooooo')
+    $('#ChatScreen').show()
+    $('.matchedNotification').hide()
   })
 })

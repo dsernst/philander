@@ -225,7 +225,7 @@ body {
     font-weight: bold;
 }
 
-.matchedNotification {
+.matchedNotification, #ChatScreen {
   width: 460px;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
@@ -265,4 +265,15 @@ body {
   border-radius: 3px;
   color: rgb(36, 115, 189);
   margin-bottom: 25px;
+}
+
+#ChatScreen {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 19px;
+}
+
+#ChatScreen .name {
+  font-weight: bold;
+  margin-bottom: -13px;
 }

@@ -79,12 +79,12 @@
       // successful.  See statusChangeCallback() for when this call is made.
       function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-          console.log('Successful login: ', response);
-          FB.api(`/${response.id}/picture`, function (picture) {
+        FB.api('/me', function(user) {
+          console.log('Successful login: ', user);
+          FB.api(`/${user.id}/picture`, function (picture) {
             console.log(picture)
             document.getElementById('login-status').innerHTML =
-            'Thanks for logging in, ' + response.name + '<br>' +
+            'Thanks for logging in, ' + user.name + '<br>' +
             `<img src="${picture.data.url}">`;
 
             $('#questions').show()
@@ -177,6 +177,13 @@
       <button id="ChatNow">Chat now</button>
     </div>
 
+    <div id="ChatScreen" style="display: none">
+      <p class='name'>Max</p>
+      <p>Hey!</p>
+      <br />
+      <p class='name'>Emma</p>
+      <p>hey I'm Emma</p>
+    </div>
 
   </body>
 </html>
