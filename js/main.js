@@ -66,7 +66,11 @@ var scheduledMsgs = [
     text: 'what do you think of bernie?',
     delay: 6000 },
 
-  { author: 'Max',
+  { author: 'Emma',
+    text: 'He\'s good but hilary seems safer',
+    delay: 14000 },
+
+  { author: 'Chris',
     text: 'hello?',
     delay: 24000 },
 ]
