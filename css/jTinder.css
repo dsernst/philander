@@ -245,10 +245,24 @@ body {
   margin-bottom: 25px;
 }
 
-#ChatScreen {
+#ChatScreen .chatlog {
   text-align: left;
   padding-left: 20px;
   font-size: 19px;
+}
+
+#ChatScreen .matches .match {
+  margin-top: 25px;
+  display: inline-block;
+  width: 55px;
+}
+
+
+#ChatScreen .matches img {
+  width: 40px;
+}
+#ChatScreen .matches .match p {
+  font-size: 14px;
 }
 
 #ChatScreen .name {
