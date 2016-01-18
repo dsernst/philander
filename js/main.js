@@ -3,7 +3,7 @@
 var numAnswered = 0
 function countAnswer() {
   if (++numAnswered === 6) {
-    setTimeout($('#status').html('You\'ve been matched!').bind(this), 0)
+    setTimeout($('#status').html('').bind(this), 0)
     $('.matchedNotification').show()
     $('#questions').hide()
   }
@@ -38,4 +38,10 @@ $('#tinderslide').jTinder({
 $('.actions .like, .actions .dislike').click(function (event) {
   event.preventDefault()
   $('#tinderslide').jTinder($(this).attr('class'))
+})
+
+$(function() {
+  $('#ChatNow').click(function () {
+    console.log('foooooooooooo')
+  })
 })

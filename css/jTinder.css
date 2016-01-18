@@ -241,6 +241,13 @@ body {
   border-radius: 15px;
 }
 
+.matchedNotification h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
 .matchedNotification .matches .match {
   margin-top: 25px;
   display: inline-block;
@@ -249,4 +256,12 @@ body {
 
 .matchedNotification .matches .match img {
   width: 90px;
+}
+
+#ChatNow {
+  font-size: large;
+  background: white;
+  border: 2px solid rgb(63, 130, 193);
+  border-radius: 3px;
+  color: rgb(36, 115, 189);
 }

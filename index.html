@@ -83,7 +83,7 @@
           console.log('Successful login: ', response);
           FB.api(`/${response.id}/picture`, function (picture) {
             console.log(picture)
-            document.getElementById('status').innerHTML =
+            document.getElementById('login-status').innerHTML =
             'Thanks for logging in, ' + response.name + '<br>' +
             `<img src="${picture.data.url}">`;
 
@@ -94,11 +94,12 @@
       }
     </script>
 
+    <div id="login-status"></div>
     <div id="status"></div>
     <fb:login-button data-size="large" scope="public_profile,email,user_photos" onlogin="checkLoginState();">
     </fb:login-button>
 
-    <div id="questions" style="display: none; margin-top: 50px;">
+    <div id="questions" style="display: none;">
         <!-- start padding container -->
         <div class="wrap">
             <!-- start jtinder container -->
@@ -158,6 +159,7 @@
     </div>
 
     <div class="matchedNotification" style="display: none">
+      <h2>You've been matched!</h2>
       <div class="matches">
         <div class="match">
           <img src="/img/max.png">
@@ -172,7 +174,7 @@
           <p>Chris</p>
         </div>
       </div>
-      <button>Chat now</button>
+      <button id="ChatNow">Chat now</button>
     </div>
 
 
