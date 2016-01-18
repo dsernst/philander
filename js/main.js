@@ -2,7 +2,7 @@
 
 var numAnswered = 0
 function countAnswer() {
-  if (++numAnswered === 6) {
+  if (++numAnswered === 5) {
     setTimeout($('#status').html('').bind(this), 0)
     $('.matchedNotification').show()
     $('#questions').hide()
