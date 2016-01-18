@@ -50,29 +50,33 @@ function newMessage(msg) {
 }
 
 function enqueue(msg) {
-  setTimeout(newMessage.bind(null, msg), msg.delay)
+  setTimeout(newMessage.bind(null, msg), msg.delay * 1000)
 }
 
 var scheduledMsgs = [
   { author: 'Max',
     text: 'Hey!',
-    delay: 1000 },
+    delay: 1 },
 
   { author: 'Emma',
     text: 'hey I\'m Emma',
-    delay: 3000 },
+    delay: 3 },
 
   { author: 'Max',
-    text: 'what do you think of bernie?',
-    delay: 6000 },
+    text: 'To jump right into it... i would love to find people who are interested in immigration policy',
+    delay: 6 },
 
   { author: 'Emma',
-    text: 'He\'s good but hilary seems safer',
-    delay: 14000 },
+    text: 'cool. Did you watch the gop debate last week?',
+    delay: 10 },
 
   { author: 'Chris',
-    text: 'hello?',
-    delay: 24000 },
+    text: 'what a circus',
+    delay: 14 },
+
+  { author: 'Chris',
+    text: 'Bernie 2016',
+    delay: 17 },
 ]
 
 $(function() {
