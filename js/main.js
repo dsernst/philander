@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, window */
 
 var numAnswered = 0
 function countAnswer() {
@@ -40,9 +40,29 @@ $('.actions .like, .actions .dislike').click(function (event) {
   $('#tinderslide').jTinder($(this).attr('class'))
 })
 
+
+function newMessage(msg) {
+  var $message = $('<div class="msg"></div>')
+  $(`<p class="name">${msg.author}</p>`).appendTo($message)
+  $(`<p>${msg.text}</p>`).appendTo($message)
+
+  $message.appendTo('#chatlog')
+}
+
 $(function() {
   $('#ChatNow').click(function () {
     $('#ChatScreen').show()
     $('.matchedNotification').hide()
   })
+
+  $('input').keypress(function (e) {
+    if (e.which === 13) {
+      newMessage({
+        text: $(this).val(),
+        author: window.firstname,
+      })
+      $(this).val('')
+    }
+  })
+
 })

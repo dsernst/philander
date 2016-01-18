@@ -87,6 +87,8 @@
             'Thanks for logging in, ' + user.name + '<br>' +
             `<img src="${picture.data.url}">`;
 
+            window.firstname = user.name.split(' ')[0]
+
             $('#questions').show()
             $('.fb_iframe_widget').hide()
           })
@@ -192,12 +194,13 @@
           <p>Chris</p>
         </div>
       </div>
-      <div class="chatlog">
+      <div id="chatlog">
         <p class='name'>Max</p>
         <p>Hey!</p>
         <p class='name'>Emma</p>
         <p>hey I'm Emma</p>
       </div>
+      <input type="text" placeholder="Type your message"></input>
     </div>
 
   </body>
