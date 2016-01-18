@@ -13,6 +13,13 @@ body {
     font-family: Helvetica, arial;
 }
 
+img.logo {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin-bottom: 28px;
+}
+
 /* Wrapper with padding */
 .wrap  {
     padding: 5%;
