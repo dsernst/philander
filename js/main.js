@@ -75,8 +75,9 @@ $(function() {
   $('#ChatNow').click(function () {
     $('#ChatScreen').show()
     $('.matchedNotification').hide()
+
+    scheduledMsgs.forEach(enqueue)
   })
-  scheduledMsgs.forEach(enqueue)
 
   $('input').keypress(function (e) {
     if (e.which === 13) {

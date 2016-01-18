@@ -89,6 +89,8 @@
 
             window.firstname = user.name.split(' ')[0]
 
+            document.getElementById('status').innerHTML = 'Do you agree with the following?'
+
             $('#questions').show()
             $('.fb_iframe_widget').hide()
           })
@@ -179,7 +181,7 @@
       <button id="ChatNow">Chat now</button>
     </div>
 
-    <div id="ChatScreen" style="display: noe">
+    <div id="ChatScreen" style="display: none">
       <div class="matches">
         <div class="match">
           <img src="/img/max.png">
